@@ -1,0 +1,92 @@
+# PROMPT: Strona internetowa premium dla biura architektonicznego / projektanta wnętrz
+
+## KONTEKST I CEL
+
+Zbuduj stronę internetową typu **premium landing page** dla biura projektowego zajmującego się architekturą i projektowaniem wnętrz (biuro Pani Marzeny). Strona ma pełnić funkcję cyfrowej wizytówki najwyższej klasy — jej zadaniem jest wywołanie u odwiedzającej/odwiedzającego natychmiastowego wrażenia: *"to jest firma, z którą muszę współpracować"*. Nie ma to być zwykła strona informacyjna, tylko **doświadczenie wizualne i emocjonalne**, które buduje zaufanie, prestiż i pożądanie.
+
+Grupa docelowa: klienci zamożni, wymagający, ceniący estetykę, dyskrecję i profesjonalizm — inwestorzy prywatni (domy jednorodzinne), ale też podmioty zlecające projekty budowlane, przetargi i inwentaryzacje.
+
+## TON I CHARAKTER MARKI
+
+- **Elegancja bez przesady** — minimalizm, dużo światła i przestrzeni (whitespace), zero chaosu wizualnego.
+- **Dosadność i pewność siebie** — komunikaty krótkie, konkretne, bez lania wody, bez marketingowych frazesów.
+- **Premium, ale ciepłe** — nie zimny korporacyjny luksus, tylko luksus "domowy", bo to architektura mieszkaniowa i wnętrza.
+- **Niecodzienność** — layout, animacje i typografia mają odróżniać stronę od typowych "szablonowych" stron firm budowlanych.
+
+## STYL WIZUALNY
+
+- **Paleta kolorów**: stonowana, ziemista/neutralna (beże, écru, głęboka czerń/grafit, złamana biel), z jednym akcentem — np. głęboka zieleń butelkowa, terakota lub ciepłe złoto — użytym oszczędnie jako element premium.
+- **Typografia**: zestawienie eleganckiego fontu szeryfowego (nagłówki, np. w stylu Canela/Playfair Display) z czystym, nowoczesnym sans-serif (treść, np. Inter/Neue Montreal). Duże, "oddychające" nagłówki.
+- **Zdjęcia i wideo**: pełnoekranowe, wysokiej jakości ujęcia zrealizowanych wnętrz i projektów architektonicznych, z subtelnym efektem parallax przy scrollowaniu. Traktuj zdjęcia jako bohatera strony — tekst ma być dyskretnym dopełnieniem.
+- **Mikroanimacje**: płynne fade-in/slide-in elementów przy scrollu, delikatny hover na kartach projektów, animowane przejścia między sekcjami (bez przesady — subtelność = luksus).
+- **Layout**: asymetryczny, oparty na siatce edytorialnej (jak w magazynach architektonicznych, np. Dezeen, Architectural Digest), a nie sztywny, symetryczny "firmowy" układ.
+
+## STRUKTURA STRONY (SEKCJE)
+
+1. **Hero / Ekran powitalny**
+   - Pełnoekranowe wideo lub slider zdjęć realizacji w tle.
+   - Krótki, mocny nagłówek (np. hasło przewodnie marki — do wygenerowania: dosadne, emocjonalne, budujące prestiż).
+   - Jedno wyraźne CTA: "Umów bezpłatną konsultację" / "Zobacz realizacje".
+   - Subtelny scroll-indicator zachęcający do przewijania.
+
+2. **O nas / Filozofia**
+   - Krótka, osobista narracja o Pani Marzenie i podejściu biura — indywidualne podejście, doradztwo na każdym etapie.
+   - Zdjęcie architekta/zespołu w naturalnym, eleganckim kadrze.
+
+3. **Zakres usług** (na bazie danych z Facebooka)
+   - Projekty budowlane i wykonawcze — wszystkie branże i specjalności
+   - Koncepcje architektoniczne i analiza planowanej inwestycji
+   - Inwentaryzacje budowlane
+   - Dokumentacje kosztorysowe do procedur przetargowych
+   - Załatwianie spraw urzędowych
+   - Każda usługa jako elegancka karta z ikoną liniową (cienkie, minimalistyczne ikony) i krótkim opisem.
+
+4. **Portfolio / Realizacje**
+   - Galeria projektów w układzie masonry lub pełnoekranowych "case studies".
+   - Możliwość filtrowania (dom jednorodzinny / wnętrza / przetargi).
+   - Interakcja: hover pokazuje nazwę projektu i lokalizację, klik otwiera pełny opis z galerią przed/po.
+
+5. **Proces współpracy**
+   - Wizualna, pozioma lub pionowa oś czasu pokazująca etapy: konsultacja → koncepcja → projekt wykonawczy → nadzór → realizacja.
+   - Animowana przy scrollu.
+
+6. **Opinie klientów** (na bazie danych z Google)
+   - Sekcja z realnymi opiniami, np.:
+     - *"Zdecydowanie polecam biuro Pani Marzeny! Zrealizowała indywidualny projekt naszego domu jednorodzinnego, doskonały kontakt i doradztwo na każdym etapie."* — ID, Lokalny Przewodnik
+     - *"Polecam"* — Agnieszka Stępień
+     - Atuty wg klientów: czas reakcji, jakość, profesjonalizm, stosunek jakości do ceny.
+   - Widoczna ocena: **5,0 / 5** na podstawie opinii Google.
+   - Eleganckie karty-cytaty z dużą typografią, zamiast typowych "gwiazdkowych" widgetów.
+
+7. **Kontakt i dane biura**
+   - Godziny otwarcia:
+     - Poniedziałek–sobota: 08:00–16:00
+     - Niedziela: zamknięte
+   - Telefon: 533 836 666
+   - Lokalizacja: Wieluń (kod plus code: 6H8C+J2 Wieluń) — osadzona mapa Google w stylowej, zdekonstruowanej ramce (nie standardowy embed Google Maps, tylko oprawiony w design strony).
+   - Formularz kontaktowy: minimalistyczny, 3–4 pola (imię, telefon/e-mail, rodzaj projektu, wiadomość).
+   - CTA do umówienia konsultacji (np. integracja z Calendly lub prosty formularz rezerwacji).
+
+8. **Stopka**
+   - Logo, dane kontaktowe, linki social media, subtelne odniesienie prawne (NIP/regulamin — jeśli dotyczy).
+
+## FUNKCJONALNOŚCI MULTIMEDIALNE I INTERAKTYWNE
+
+- Wideo w tle sekcji hero (autoplay, muted, loop, zoptymalizowane pod szybkość ładowania).
+- Galeria realizacji z lekką animacją przejścia (lightbox, fade).
+- Parallax scrolling na zdjęciach.
+- Cursor-follow effect lub subtelne animacje 3D/tilt na kartach projektów (opcjonalnie, dla efektu "wow").
+- Płynne przewijanie (smooth scroll) i animacje wejścia elementów (Intersection Observer / scroll-triggered animations).
+- Pełna responsywność (RWD) — mobile-first, ale bez utraty efektu "premium" na telefonie.
+
+## WYMAGANIA TECHNICZNE I UX
+
+- Szybkość ładowania — mimo bogatej multimedialności, obrazy i wideo muszą być zoptymalizowane (lazy loading, kompresja, WebP/AVIF).
+- Dostępność (accessibility) — kontrast, alt-teksty, nawigacja klawiaturą.
+- SEO lokalne — dane NAP (nazwa, adres, telefon) spójne z Google Maps, meta opisy zorientowane na frazy typu "architekt Wieluń", "projektant wnętrz Wieluń", "projekty budowlane Wieluń".
+- Jasne, widoczne w każdej sekcji CTA prowadzące do kontaktu/konsultacji.
+- Strona jednostronicowa (one-page) z płynną nawigacją kotwicową LUB rozbudowana wielopodstronowa — do wyboru w zależności od ilości treści portfolio.
+
+## EFEKT KOŃCOWY
+
+Strona ma sprawiać wrażenie, że wchodzi się do eleganckiego, starannie zaprojektowanego wnętrza — każdy scroll to nowe "pomieszczenie" z własnym nastrojem, światłem i historią. Użytkownik ma czuć, że firma dba o detale tak samo w swojej stronie internetowej, jak i w projektach, które realizuje — i że kontakt z takim biurem to inwestycja w jakość, nie koszt.

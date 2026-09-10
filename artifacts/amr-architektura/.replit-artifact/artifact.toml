@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "AMR Architektura"
+description = "Premium one-page website for AMR Architektura in Wieluń, presenting architecture services, selected projects, client reviews, and consultation contact details with a full-screen background video hero."
+version = "1.0.0"
+id = "artifacts/amr-architektura"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25877
+
+[services.development]
+run = "pnpm --filter @workspace/amr-architektura run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/amr-architektura", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/amr-architektura/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25877"
+BASE_PATH = "/"
