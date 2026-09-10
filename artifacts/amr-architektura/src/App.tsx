@@ -45,7 +45,7 @@ const projects: Project[] = [
     place: 'Wieluń',
     year: '2024',
     description: 'Dom, który porządkuje relację między prywatnością a ogrodem. Prosta bryła, miękkie światło i materiały, które dojrzewają razem z mieszkańcami.',
-    image: '/amr-studio.jpg',
+    image: '/amr-project-01.png',
     position: 'center',
     facts: ['184 m²', 'projekt kompleksowy', 'realizacja 2025'],
   },
@@ -56,8 +56,8 @@ const projects: Project[] = [
     place: 'Sieradz',
     year: '2023',
     description: 'Wnętrze apartamentu zbudowane wokół ciszy: wapienne powierzchnie, naturalny dąb i detal bez zbędnego gestu.',
-    image: '/amr-hero-poster.jpg',
-    position: 'center 70%',
+    image: '/amr-project-02.png',
+    position: 'center',
     facts: ['92 m²', 'projekt wnętrz', 'nadzór autorski'],
   },
   {
@@ -67,8 +67,8 @@ const projects: Project[] = [
     place: 'okolice Wielunia',
     year: '2022',
     description: 'Kameralny dom jednorodzinny wpisany w pochyłą działkę. Najważniejszym widokiem pozostaje ten, który zmienia się przez cały dzień.',
-    image: '/amr-hero-poster.jpg',
-    position: 'left center',
+    image: '/amr-project-03.png',
+    position: 'center',
     facts: ['146 m²', 'projekt budowlany', 'koncepcja 2022'],
   },
   {
@@ -78,8 +78,8 @@ const projects: Project[] = [
     place: 'Ruda',
     year: '2024',
     description: 'Przebudowa domu z lat 80. bez udawania nowego początku. Odzyskana wysokość, otwarte parterowe wnętrze i kolor terakoty.',
-    image: '/amr-studio.jpg',
-    position: 'right center',
+    image: '/amr-project-04.png',
+    position: 'center',
     facts: ['128 m²', 'przebudowa', 'konsultacje materiałowe'],
   },
   {
@@ -89,9 +89,64 @@ const projects: Project[] = [
     place: 'Wieruszów',
     year: '2021',
     description: 'Cichy dom z widokiem na dolinę. Jego plan zaczyna się od porannego światła i kończy na tarasie.',
-    image: '/amr-studio.jpg',
-    position: 'center 30%',
+    image: '/amr-project-05.png',
+    position: 'center',
     facts: ['164 m²', 'koncepcja architektoniczna', 'projekt wnętrz'],
+  },
+  {
+    id: 'nowa-bryla',
+    title: 'Nowa bryła',
+    category: 'Domy',
+    place: 'Wieluń',
+    year: '2025',
+    description: 'Współczesna bryła zaprojektowana jako spokojne tło dla codzienności.',
+    image: '/amr-project-06.png',
+    position: 'center',
+    facts: ['projekt budowlany', 'detal elewacji', 'nadzór autorski'],
+  },
+  {
+    id: 'kuchnia-z-widokiem',
+    title: 'Kuchnia z widokiem',
+    category: 'Wnętrza',
+    place: 'okolice Wielunia',
+    year: '2025',
+    description: 'Ciepłe wnętrze kuchni, w którym naturalne drewno spotyka się z miękkim światłem.',
+    image: '/amr-project-07.png',
+    position: 'center',
+    facts: ['projekt wnętrz', 'materiały naturalne', 'zabudowa na wymiar'],
+  },
+  {
+    id: 'schody',
+    title: 'Światło i detal',
+    category: 'Wnętrza',
+    place: 'Sieradz',
+    year: '2024',
+    description: 'Rzeźbiarskie schody i światło, które prowadzą przez wnętrze.',
+    image: '/amr-project-08.png',
+    position: 'center',
+    facts: ['detal wnętrza', 'konsultacje materiałowe', 'projekt kompleksowy'],
+  },
+  {
+    id: 'salon-z-widokiem',
+    title: 'Salon z widokiem',
+    category: 'Wnętrza',
+    place: 'Wieruszów',
+    year: '2024',
+    description: 'Przestrzeń dzienna otwarta na ogród, zbudowana wokół spokoju i naturalnych materiałów.',
+    image: '/amr-project-09.png',
+    position: 'center',
+    facts: ['projekt wnętrz', 'układ funkcjonalny', 'nadzór autorski'],
+  },
+  {
+    id: 'wieczorny-rytm',
+    title: 'Wieczorny rytm',
+    category: 'Wnętrza',
+    place: 'Wieluń',
+    year: '2023',
+    description: 'Kameralna sypialnia, w której materiały i światło budują poczucie wyciszenia.',
+    image: '/amr-project-10.png',
+    position: 'center',
+    facts: ['projekt wnętrz', 'koncepcja materiałowa', 'aranżacja'],
   },
 ];
 
@@ -194,9 +249,9 @@ function Hero() {
         <div className="absolute left-0 top-28 text-[9px] uppercase tracking-[.2em] text-[#eee7d9]/60">Wieluń, Polska</div>
         <div className="absolute right-0 top-28 text-right text-[9px] uppercase tracking-[.2em] text-[#eee7d9]/60">Architektura / wnętrza / projekty</div>
         <div className="hero-content max-w-3xl">
-          <p className="eyebrow mb-6 text-[#d4774e]">Pracownia architektoniczna</p>
-          <h1 className="display-title max-w-3xl text-[clamp(3.8rem,9vw,8.3rem)] leading-[.78]">Dziedzictwo<br /><em className="font-normal text-[#d4774e]">projektowane z intencją.</em></h1>
-          <div className="mt-10 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+          <p className="mb-8 flex items-baseline gap-2 font-display uppercase leading-none tracking-[.13em] text-[#eee7d9]"><span className="text-[1.35rem] tracking-[.02em]">AMR</span><span className="text-[.62rem] tracking-[.2em] text-[#eee7d9]/75">ARCHITEKTURA</span></p>
+          <h1 className="display-title max-w-3xl text-[clamp(2.4rem,5vw,4.3rem)] leading-[.82]">Dziedzictwo<br /><em className="font-normal text-[#d4774e]">projektowane z intencją.</em></h1>
+          <div className="mt-16 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between md:mt-24">
             <p className="max-w-md text-sm leading-6 text-[#eee7d9]/70 md:text-[15px]">AMR Architektura — biuro Marzeny Ratajczyk. Projektujemy miejsca, które dobrze starzeją się razem z ludźmi.</p>
             <div className="flex shrink-0 items-center gap-6">
               <a href="#realizacje" className="focus-ring line-link text-[10px] font-medium uppercase tracking-[.18em]" data-testid="link-hero-projects">Zobacz realizacje <ArrowRight size={14} /></a>
@@ -230,7 +285,7 @@ function StudioSection() {
           </Reveal>
           <Reveal className="reveal-delay-1">
             <figure className="studio-image relative overflow-hidden">
-              <img src="/amr-studio.jpg" alt="Ujęcie z lotu ptaka nad obiektem w Wieluniu" className="h-full min-h-[420px] w-full object-cover object-center grayscale-[.15] sepia-[.12]" />
+              <img src="/amr-project-09.png" alt="Salon z widokiem zaprojektowany przez AMR Architektura" className="h-full min-h-[420px] w-full object-cover object-center grayscale-[.15] sepia-[.12]" />
               <figcaption className="absolute bottom-0 left-0 border-r border-t border-[#eee7d9]/20 bg-[#17120d]/80 px-4 py-3 text-[9px] uppercase tracking-[.15em] text-[#eee7d9]/75">AMR Architektura / Wieluń</figcaption>
             </figure>
           </Reveal>
@@ -280,25 +335,16 @@ function ServicesSection() {
 }
 
 function ProjectsSection({ onOpen }: { onOpen: (project: Project) => void }) {
-  const [filter, setFilter] = useState<'Wszystkie' | Project['category']>('Wszystkie');
-  const filters: Array<'Wszystkie' | Project['category']> = ['Wszystkie', 'Domy', 'Wnętrza', 'Przebudowy'];
-  const filtered = filter === 'Wszystkie' ? projects : projects.filter((project) => project.category === filter);
   return (
     <section id="realizacje" className="section-pad bg-[#17120d]">
       <div className="section-wrap">
-        <Reveal className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
-          <div><p className="eyebrow">03 / Realizacje</p><h2 className="display-title mt-6 max-w-2xl text-[clamp(3rem,6vw,6rem)] leading-[.82] text-[#eee7d9]">Wybrane archiwum<br /><em className="font-normal text-[#d4774e]">przestrzeni i realizacji.</em></h2></div>
-          <div className="flex flex-wrap gap-4" role="group" aria-label="Filtruj realizacje">{filters.map((item) => <button type="button" key={item} onClick={() => setFilter(item)} className={`focus-ring border-b pb-2 text-[9px] font-medium uppercase tracking-[.17em] transition-colors ${filter === item ? 'border-[#d4774e] text-[#d4774e]' : 'border-transparent text-[#eee7d9]/45 hover:text-[#eee7d9]'}`} aria-pressed={filter === item} data-testid={`button-filter-${item.toLowerCase()}`}>{item}</button>)}</div>
-        </Reveal>
-        <div className="mt-14 grid gap-x-3 gap-y-12 md:grid-cols-3">
-          {filtered.map((project, index) => <Reveal key={project.id} className={`${index % 3 === 1 ? 'md:mt-16' : ''} ${index % 3 === 2 ? 'md:mt-[-1rem]' : ''}`}>
+        <div className="grid gap-x-3 gap-y-4 md:grid-cols-3">
+          {projects.map((project, index) => <Reveal key={project.id} className={`${index % 3 === 1 ? 'md:mt-16' : ''} ${index % 3 === 2 ? 'md:mt-[-1rem]' : ''}`}>
             <button type="button" onClick={() => onOpen(project)} className="project-card focus-ring group block w-full text-left" data-testid={`button-project-${project.id}`}>
-              <div className={`project-art ${index % 2 === 0 ? 'aspect-[.78]' : 'aspect-[1.05]'}`}><img src={project.image} alt={`${project.title} — ${project.category}`} style={{ objectPosition: project.position }} /><span className="absolute left-4 top-4 z-10 text-[9px] font-medium uppercase tracking-[.17em] text-[#eee7d9]/85">{project.category}</span><span className="absolute bottom-4 right-4 z-10 flex items-center gap-2 text-[9px] font-medium uppercase tracking-[.17em] text-[#eee7d9] opacity-0 transition-opacity group-hover:opacity-100">Otwórz <Plus size={13} /></span></div>
-              <div className="mt-4 flex items-start justify-between gap-3"><div><h3 className="font-display text-[1.55rem] text-[#eee7d9]">{project.title}</h3><p className="mt-1 text-[9px] uppercase tracking-[.15em] text-[#eee7d9]/43">{project.place} · {project.year}</p></div><ArrowUpRight size={17} strokeWidth={1.2} className="mt-1 text-[#d4774e] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" /></div>
+              <div className={`project-art ${index % 2 === 0 ? 'aspect-[.78]' : 'aspect-[1.05]'}`}><img src={project.image} alt={`${project.title} — ${project.category}`} style={{ objectPosition: project.position }} /></div>
             </button>
           </Reveal>)}
         </div>
-        <p className="mt-14 text-center text-[9px] uppercase tracking-[.16em] text-[#eee7d9]/35">Pełny wybór realizacji przedstawiamy podczas pierwszego spotkania.</p>
       </div>
     </section>
   );
@@ -341,13 +387,20 @@ function ReviewSection() {
 }
 
 function MapPanel() {
+  const [zoom, setZoom] = useState(1);
   return <div className="map-panel relative min-h-[370px] overflow-hidden border border-[#eee7d9]/15" role="img" aria-label="Mapa lokalizacji biura AMR Architektura w Wieluniu">
-    <div className="map-grid absolute inset-0" />
-    <div className="map-road map-road-a" /><div className="map-road map-road-b" /><div className="map-road map-road-c" />
-    <div className="absolute left-5 top-5 border border-[#17120d] bg-[#eee7d9] px-3 py-2 text-[9px] font-semibold uppercase tracking-[.14em] text-[#17120d]">Biuro</div>
-    <div className="map-pin absolute left-[52%] top-[48%] flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#17120d] bg-[#b45e36] text-[#eee7d9]"><MapPin size={16} /></div>
-    <div className="absolute bottom-4 left-5 bg-[#eee7d9]/80 px-3 py-2 text-[8px] uppercase tracking-[.13em] text-[#17120d]">98-300 Wieluń</div>
-    <div className="absolute bottom-4 right-5 text-[8px] uppercase tracking-[.13em] text-[#17120d]/60">18° 34' E / 51° 13' N</div>
+    <div className="map-scene absolute inset-0" style={{ transform: `scale(${zoom})` }}>
+      <div className="map-grid absolute inset-0" />
+      <div className="map-road map-road-a" /><div className="map-road map-road-b" /><div className="map-road map-road-c" />
+      <div className="absolute left-5 top-5 border border-[#17120d] bg-[#eee7d9] px-3 py-2 text-[9px] font-semibold uppercase tracking-[.14em] text-[#17120d]">Biuro</div>
+      <div className="map-pin absolute left-[52%] top-[48%] flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-[#17120d] bg-[#b45e36] text-[#eee7d9]"><MapPin size={16} /></div>
+      <div className="absolute bottom-4 left-5 bg-[#eee7d9]/80 px-3 py-2 text-[8px] uppercase tracking-[.13em] text-[#17120d]">98-300 Wieluń</div>
+      <div className="absolute bottom-4 right-5 text-[8px] uppercase tracking-[.13em] text-[#17120d]/60">18° 34' E / 51° 13' N</div>
+    </div>
+    <div className="absolute right-4 top-4 z-10 flex flex-col overflow-hidden border border-[#17120d]/25 bg-[#eee7d9]/90 text-[#17120d] shadow-sm">
+      <button type="button" onClick={() => setZoom((value) => Math.min(1.65, Number((value + 0.15).toFixed(2))))} className="focus-ring flex h-9 w-9 items-center justify-center border-b border-[#17120d]/20" aria-label="Powiększ mapę" data-testid="button-map-zoom-in"><Plus size={15} /></button>
+      <button type="button" onClick={() => setZoom((value) => Math.max(1, Number((value - 0.15).toFixed(2))))} className="focus-ring flex h-9 w-9 items-center justify-center" aria-label="Pomniejsz mapę" data-testid="button-map-zoom-out"><Minus size={15} /></button>
+    </div>
   </div>;
 }
 

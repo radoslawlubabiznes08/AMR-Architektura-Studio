@@ -165,7 +165,7 @@
 .header-scrolled { background: rgba(23,18,13,.95); border-color: rgba(238,233,223,.15); box-shadow: 0 10px 32px rgba(0,0,0,.18); }
 .header-transition { transition: background .45s ease, border-color .45s ease, box-shadow .45s ease; }
 .project-art { position: relative; isolation: isolate; overflow: hidden; background: #332b24; }
-.project-art::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(23,18,13,.08), rgba(23,18,13,.66)); pointer-events: none; }
+.project-art::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(23,18,13,.02), rgba(23,18,13,.12)); pointer-events: none; }
 .project-art img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.68) sepia(.12) contrast(1.04); transition: transform .8s var(--ease-atelier), filter .8s ease; }
 .project-card:hover .project-art img { transform: scale(1.045); filter: saturate(.82) sepia(.08) contrast(1.06); }
 .number-outline { font-family: var(--app-font-serif); font-size: clamp(5rem, 11vw, 9.5rem); color: transparent; -webkit-text-stroke: 1px rgba(182,111,77,.55); line-height: .75; }
@@ -180,6 +180,7 @@
 .form-label { display: block; color: rgba(238,233,223,.62); font-size: .67rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
 .contact-success { border-left: 2px solid hsl(var(--accent)); background: rgba(238,233,223,.05); }
 .map-panel { background: #d7d1c4; filter: saturate(.45); }
+.map-scene { transform-origin: center; transition: transform .35s var(--ease-atelier); }
 .map-grid { opacity: .45; background-image: linear-gradient(24deg, transparent 0 48%, rgba(60,53,44,.38) 49% 50%, transparent 51%), linear-gradient(145deg, transparent 0 43%, rgba(60,53,44,.24) 44% 45%, transparent 46%), repeating-linear-gradient(90deg, transparent 0 42px, rgba(60,53,44,.18) 43px 44px), repeating-linear-gradient(0deg, transparent 0 36px, rgba(60,53,44,.13) 37px 38px); }
 .map-road { position: absolute; height: 2px; background: rgba(75,67,56,.4); transform-origin: left center; }
 .map-road-a { width: 125%; left: -10%; top: 48%; transform: rotate(-16deg); }
