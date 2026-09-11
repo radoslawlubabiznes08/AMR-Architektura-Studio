@@ -348,7 +348,7 @@ function ProjectsSection({ onOpen }: { onOpen: (project: Project) => void }) {
       category: 'Wnętrza' as const,
       place: '',
       year: '',
-      description: '',
+      description: 'Przytulna sypialnia o ciepłym klimacie.',
       image: '/amr-archive-09.png',
       position: 'center',
       facts: [],

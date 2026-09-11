@@ -1,0 +1,30 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "bWLU6V-tejlCspRerblpd"
+uri = "file://artifacts/amr-architektura/public/amr-logo.png"
+type = "image"
+title = "Logo AMR — wersja źródłowa"
+description = "Oryginalny załączony znak AMR w proporcjach poziomych."
+logical_id = "b102ff31-d0a7-4aeb-bfb3-aa59dd862a2e"
+content_hash = "sha256:e276f5a5388a233a41fc03c5a80700be651bb167bc5fa942e72d4d49138fbb3c"
+size = 10419
+mtime_ms = 1789138440017
+storage_uri = "gcs://replit-rams-assets-archer/rams/assets/repl:04954e05-1a6e-4b2c-8e6c-eab34f9d847a/b102ff31-d0a7-4aeb-bfb3-aa59dd862a2e/659145fd-a70f-4635-b941-0fbed42d43fa"
+storage_version_token = "1789138491329852"
+content_type = "image/png"
+
+[[outputs]]
+id = "3AR5bPnbmYFFLnXT9KajM"
+uri = "file://artifacts/amr-architektura/public/favicon-32.png"
+type = "image"
+title = "Logo AMR — favicon kwadratowy 32×32"
+description = "Kwadratowa wersja z zielonym tłem i bezpiecznym marginesem; wszystkie litery pozostają widoczne."
+logical_id = "b794b8db-9a13-471c-8f3e-28df30ebb201"
+content_hash = "sha256:67d05c137679cdae42f222a7e3ac86242ddd4af5ea679eb13aa842f08c74cfa9"
+size = 1339
+mtime_ms = 1789138440057
+storage_uri = "gcs://replit-rams-assets-archer/rams/assets/repl:04954e05-1a6e-4b2c-8e6c-eab34f9d847a/b794b8db-9a13-471c-8f3e-28df30ebb201/d6adeb40-2689-4b89-b007-7ba0a2f6a8d0"
+storage_version_token = "1789138492039960"
+content_type = "image/png"
