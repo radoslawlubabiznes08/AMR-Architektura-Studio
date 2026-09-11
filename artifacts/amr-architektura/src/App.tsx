@@ -337,7 +337,10 @@ function ServicesSection() {
 function ProjectsSection({ onOpen }: { onOpen: (project: Project) => void }) {
   const [filter, setFilter] = useState<'Wszystkie' | 'Domy' | 'Wnętrza'>('Wszystkie');
   const filters: Array<'Wszystkie' | 'Domy' | 'Wnętrza'> = ['Wszystkie', 'Domy', 'Wnętrza'];
-  const archiveProjects = projects.slice(0, 8);
+  const archiveProjects = projects.slice(0, 8).map((project, index) => ({
+    ...project,
+    category: (index < 5 ? 'Domy' : 'Wnętrza') as Project['category'],
+  }));
   const visibleProjects = filter === 'Wszystkie' ? archiveProjects : archiveProjects.filter((project) => project.category === filter);
   const firstRow = visibleProjects.slice(0, 3);
   const secondRow = visibleProjects.slice(3, 5);
@@ -352,13 +355,16 @@ function ProjectsSection({ onOpen }: { onOpen: (project: Project) => void }) {
   return (
     <section id="realizacje" className="section-pad bg-[#17120d]">
       <div className="section-wrap">
-        <Reveal className="archive-header flex flex-col justify-between gap-8 md:flex-row md:items-end">
-          <h2 className="display-title max-w-2xl text-[clamp(3rem,5.5vw,5.6rem)] leading-[.82] text-[#eee7d9]">Wybrane archiwum<br /><em className="font-normal text-[#eee7d9]">przestrzeni i realizacji.</em></h2>
-          <div className="archive-filters flex gap-5" role="group" aria-label="Filtruj realizacje">
+        <Reveal className="archive-header grid gap-8 md:grid-cols-[1fr_.65fr] md:items-end">
+          <div>
+            <p className="eyebrow">03 / Realizacje</p>
+            <h2 className="display-title mt-6 max-w-2xl text-[clamp(3rem,6vw,6rem)] leading-[.82] text-[#eee7d9]">Wybrane archiwum<br /><em className="font-normal text-[#d4774e]">przestrzeni i realizacji.</em></h2>
+          </div>
+          <div className="archive-filters flex flex-wrap gap-5 md:justify-end md:self-start" role="group" aria-label="Filtruj realizacje">
             {filters.map((item) => <button type="button" key={item} onClick={() => setFilter(item)} className={`focus-ring border-b pb-2 text-[9px] font-medium uppercase tracking-[.17em] transition-colors ${filter === item ? 'border-[#d4774e] text-[#d4774e]' : 'border-transparent text-[#eee7d9]/45 hover:text-[#eee7d9]'}`} aria-pressed={filter === item} data-testid={`button-filter-${item.toLowerCase()}`}>{item}</button>)}
           </div>
         </Reveal>
-        <div className="archive-rows mt-14">
+        <div key={filter} className="archive-rows archive-rows-transition mt-16">
           <div className="archive-row archive-row-one">
             {firstRow.map((project, index) => renderProject(project, `archive-row-one-item-${index + 1}`))}
           </div>
