@@ -45,7 +45,7 @@ const projects: Project[] = [
     place: 'Wieluń',
     year: '2024',
     description: 'Dom, który porządkuje relację między prywatnością a ogrodem. Prosta bryła, miękkie światło i materiały, które dojrzewają razem z mieszkańcami.',
-    image: '/amr-feature-01.png',
+    image: '/amr-archive-01.png',
     position: 'center',
     facts: ['184 m²', 'projekt kompleksowy', 'realizacja 2025'],
   },
@@ -56,7 +56,7 @@ const projects: Project[] = [
     place: 'Sieradz',
     year: '2023',
     description: 'Wnętrze apartamentu zbudowane wokół ciszy: wapienne powierzchnie, naturalny dąb i detal bez zbędnego gestu.',
-    image: '/amr-feature-02.png',
+    image: '/amr-archive-02.png',
     position: 'center',
     facts: ['92 m²', 'projekt wnętrz', 'nadzór autorski'],
   },
@@ -67,7 +67,7 @@ const projects: Project[] = [
     place: 'okolice Wielunia',
     year: '2022',
     description: 'Kameralny dom jednorodzinny wpisany w pochyłą działkę. Najważniejszym widokiem pozostaje ten, który zmienia się przez cały dzień.',
-    image: '/amr-feature-03.png',
+    image: '/amr-archive-03.png',
     position: 'center',
     facts: ['146 m²', 'projekt budowlany', 'koncepcja 2022'],
   },
@@ -78,7 +78,7 @@ const projects: Project[] = [
     place: 'Ruda',
     year: '2024',
     description: 'Przebudowa domu z lat 80. bez udawania nowego początku. Odzyskana wysokość, otwarte parterowe wnętrze i kolor terakoty.',
-    image: '/amr-feature-04.png',
+    image: '/amr-archive-04.png',
     position: 'center',
     facts: ['128 m²', 'przebudowa', 'konsultacje materiałowe'],
   },
@@ -89,7 +89,7 @@ const projects: Project[] = [
     place: 'Wieruszów',
     year: '2021',
     description: 'Cichy dom z widokiem na dolinę. Jego plan zaczyna się od porannego światła i kończy na tarasie.',
-    image: '/amr-feature-05.png',
+    image: '/amr-archive-05.png',
     position: 'center',
     facts: ['164 m²', 'koncepcja architektoniczna', 'projekt wnętrz'],
   },
@@ -100,7 +100,7 @@ const projects: Project[] = [
     place: 'Wieluń',
     year: '2025',
     description: 'Współczesna bryła zaprojektowana jako spokojne tło dla codzienności.',
-    image: '/amr-project-06.png',
+    image: '/amr-archive-06.png',
     position: 'center',
     facts: ['projekt budowlany', 'detal elewacji', 'nadzór autorski'],
   },
@@ -111,7 +111,7 @@ const projects: Project[] = [
     place: 'okolice Wielunia',
     year: '2025',
     description: 'Ciepłe wnętrze kuchni, w którym naturalne drewno spotyka się z miękkim światłem.',
-    image: '/amr-project-07.png',
+    image: '/amr-archive-07.png',
     position: 'center',
     facts: ['projekt wnętrz', 'materiały naturalne', 'zabudowa na wymiar'],
   },
@@ -122,7 +122,7 @@ const projects: Project[] = [
     place: 'Sieradz',
     year: '2024',
     description: 'Rzeźbiarskie schody i światło, które prowadzą przez wnętrze.',
-    image: '/amr-project-08.png',
+    image: '/amr-archive-08.png',
     position: 'center',
     facts: ['detal wnętrza', 'konsultacje materiałowe', 'projekt kompleksowy'],
   },
@@ -285,7 +285,7 @@ function StudioSection() {
           </Reveal>
           <Reveal className="reveal-delay-1">
             <figure className="studio-image relative overflow-hidden">
-              <img src="/amr-feature-01.png" alt="Dom jednorodzinny zaprojektowany przez AMR Architektura" className="h-full min-h-[420px] w-full object-cover object-center grayscale-[.15] sepia-[.12]" />
+              <img src="/amr-archive-01.png" alt="Dom jednorodzinny zaprojektowany przez AMR Architektura" className="h-full min-h-[420px] w-full object-cover object-center grayscale-[.15] sepia-[.12]" />
               <figcaption className="absolute bottom-0 left-0 border-r border-t border-[#eee7d9]/20 bg-[#17120d]/80 px-4 py-3 text-[9px] uppercase tracking-[.15em] text-[#eee7d9]/75">AMR Architektura / Wieluń</figcaption>
             </figure>
           </Reveal>
@@ -335,23 +335,39 @@ function ServicesSection() {
 }
 
 function ProjectsSection({ onOpen }: { onOpen: (project: Project) => void }) {
-  const featuredProjects = projects.slice(0, 5);
+  const [filter, setFilter] = useState<'Wszystkie' | 'Domy' | 'Wnętrza'>('Wszystkie');
+  const filters: Array<'Wszystkie' | 'Domy' | 'Wnętrza'> = ['Wszystkie', 'Domy', 'Wnętrza'];
+  const archiveProjects = projects.slice(0, 8);
+  const visibleProjects = filter === 'Wszystkie' ? archiveProjects : archiveProjects.filter((project) => project.category === filter);
+  const firstRow = visibleProjects.slice(0, 3);
+  const secondRow = visibleProjects.slice(3, 5);
+  const thirdRow = visibleProjects.slice(5, 8);
+  const renderProject = (project: Project, className = '') => (
+    <Reveal key={project.id} className={`archive-item ${className}`}>
+      <button type="button" onClick={() => onOpen(project)} className="project-card focus-ring group block w-full text-left" data-testid={`button-project-${project.id}`}>
+        <div className="project-art h-full"><img src={project.image} alt={`${project.title} — ${project.category}`} style={{ objectPosition: project.position }} /></div>
+      </button>
+    </Reveal>
+  );
   return (
     <section id="realizacje" className="section-pad bg-[#17120d]">
       <div className="section-wrap">
-        <div className="projects-editorial">
-          <Reveal className="projects-intro">
-            <p className="eyebrow">03 / Realizacje</p>
-            <h2 className="display-title mt-6 max-w-sm text-[clamp(3.6rem,7vw,7rem)] leading-[.78] text-[#eee7d9]">Realizacje</h2>
-            <p className="mt-8 max-w-xs text-sm leading-6 text-[#eee7d9]/55">Wybrane domy i wnętrza — projektowane z myślą o świetle, proporcji i codziennym rytmie mieszkańców.</p>
-          </Reveal>
-          <div className="projects-mosaic">
-          {featuredProjects.map((project, index) => <Reveal key={project.id} className={`project-mosaic-item project-mosaic-item-${index + 1}`}>
-            <button type="button" onClick={() => onOpen(project)} className="project-card focus-ring group block w-full text-left" data-testid={`button-project-${project.id}`}>
-              <div className="project-art h-full min-h-[240px]"><img src={project.image} alt={`${project.title} — ${project.category}`} style={{ objectPosition: project.position }} /></div>
-            </button>
-          </Reveal>)}
+        <Reveal className="archive-header flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <h2 className="display-title max-w-2xl text-[clamp(3rem,5.5vw,5.6rem)] leading-[.82] text-[#eee7d9]">Wybrane archiwum<br /><em className="font-normal text-[#eee7d9]">przestrzeni i realizacji.</em></h2>
+          <div className="archive-filters flex gap-5" role="group" aria-label="Filtruj realizacje">
+            {filters.map((item) => <button type="button" key={item} onClick={() => setFilter(item)} className={`focus-ring border-b pb-2 text-[9px] font-medium uppercase tracking-[.17em] transition-colors ${filter === item ? 'border-[#d4774e] text-[#d4774e]' : 'border-transparent text-[#eee7d9]/45 hover:text-[#eee7d9]'}`} aria-pressed={filter === item} data-testid={`button-filter-${item.toLowerCase()}`}>{item}</button>)}
           </div>
+        </Reveal>
+        <div className="archive-rows mt-14">
+          <div className="archive-row archive-row-one">
+            {firstRow.map((project, index) => renderProject(project, `archive-row-one-item-${index + 1}`))}
+          </div>
+          {secondRow.length > 0 && <div className="archive-row archive-row-two">
+            {secondRow.map((project, index) => renderProject(project, `archive-row-two-item-${index + 1}`))}
+          </div>}
+          {thirdRow.length > 0 && <div className="archive-row archive-row-three">
+            {thirdRow.map((project, index) => renderProject(project, `archive-row-three-item-${index + 1}`))}
+          </div>}
         </div>
       </div>
     </section>
