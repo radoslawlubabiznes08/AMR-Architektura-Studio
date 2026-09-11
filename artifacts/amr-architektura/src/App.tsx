@@ -40,7 +40,7 @@ type Project = {
 const projects: Project[] = [
   {
     id: 'mlynarska',
-    title: 'Dom przy Młynarskiej',
+    title: 'Dom z ogrodem',
     category: 'Domy',
     place: 'Wieluń',
     year: '2024',
@@ -51,7 +51,7 @@ const projects: Project[] = [
   },
   {
     id: 'tarninowa',
-    title: 'Tarninowa / wnętrze',
+    title: 'Willa przy lesie',
     category: 'Wnętrza',
     place: 'Sieradz',
     year: '2023',
@@ -62,7 +62,7 @@ const projects: Project[] = [
   },
   {
     id: 'pod-lasem',
-    title: 'Pod lasem',
+    title: 'Inwestycja mieszkaniowa',
     category: 'Domy',
     place: 'okolice Wielunia',
     year: '2022',
@@ -73,7 +73,7 @@ const projects: Project[] = [
   },
   {
     id: 'ruda',
-    title: 'Ruda / nowe światło',
+    title: 'GOKiS w Wieruszowie',
     category: 'Przebudowy',
     place: 'Ruda',
     year: '2024',
@@ -84,7 +84,7 @@ const projects: Project[] = [
   },
   {
     id: 'nad-rzeka',
-    title: 'Nad rzeką',
+    title: 'Budynek użyteczności publicznej',
     category: 'Domy',
     place: 'Wieruszów',
     year: '2021',
@@ -95,7 +95,7 @@ const projects: Project[] = [
   },
   {
     id: 'nowa-bryla',
-    title: 'Nowa bryła',
+    title: 'Kuchnia – dąb i beton',
     category: 'Domy',
     place: 'Wieluń',
     year: '2025',
@@ -106,7 +106,7 @@ const projects: Project[] = [
   },
   {
     id: 'kuchnia-z-widokiem',
-    title: 'Kuchnia z widokiem',
+    title: 'Schody w świetle',
     category: 'Wnętrza',
     place: 'okolice Wielunia',
     year: '2025',
@@ -117,7 +117,7 @@ const projects: Project[] = [
   },
   {
     id: 'schody',
-    title: 'Światło i detal',
+    title: 'Salon złotej godziny',
     category: 'Wnętrza',
     place: 'Sieradz',
     year: '2024',
