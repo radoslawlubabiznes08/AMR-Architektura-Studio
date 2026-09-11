@@ -337,14 +337,28 @@ function ServicesSection() {
 function ProjectsSection({ onOpen }: { onOpen: (project: Project) => void }) {
   const [filter, setFilter] = useState<'Wszystkie' | 'Domy' | 'Wnętrza'>('Wszystkie');
   const filters: Array<'Wszystkie' | 'Domy' | 'Wnętrza'> = ['Wszystkie', 'Domy', 'Wnętrza'];
-  const archiveProjects = projects.slice(0, 8).map((project, index) => ({
-    ...project,
-    category: (index < 5 ? 'Domy' : 'Wnętrza') as Project['category'],
-  }));
+  const archiveProjects = [
+    ...projects.slice(0, 8).map((project, index) => ({
+      ...project,
+      category: (index < 5 ? 'Domy' : 'Wnętrza') as Project['category'],
+    })),
+    {
+      id: 'sypialnia-o-zmierzchu',
+      title: 'Sypialnia o zmierzchu',
+      category: 'Wnętrza' as const,
+      place: '',
+      year: '',
+      description: '',
+      image: '/amr-archive-09.png',
+      position: 'center',
+      facts: [],
+    },
+  ];
   const visibleProjects = filter === 'Wszystkie' ? archiveProjects : archiveProjects.filter((project) => project.category === filter);
   const firstRow = visibleProjects.slice(0, 3);
   const secondRow = visibleProjects.slice(3, 5);
   const thirdRow = visibleProjects.slice(5, 8);
+  const fourthRow = visibleProjects.slice(8);
   const renderProject = (project: Project, className = '') => (
     <Reveal key={project.id} className={`archive-item ${className}`}>
       <button type="button" onClick={() => onOpen(project)} className="project-card focus-ring group block w-full text-left" data-testid={`button-project-${project.id}`}>
@@ -373,6 +387,9 @@ function ProjectsSection({ onOpen }: { onOpen: (project: Project) => void }) {
           </div>}
           {thirdRow.length > 0 && <div className="archive-row archive-row-three">
             {thirdRow.map((project, index) => renderProject(project, `archive-row-three-item-${index + 1}`))}
+          </div>}
+          {fourthRow.length > 0 && <div className="archive-row archive-row-four">
+            {fourthRow.map((project, index) => renderProject(project, `archive-row-four-item-${index + 1}`))}
           </div>}
         </div>
       </div>
