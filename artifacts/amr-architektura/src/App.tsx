@@ -6,7 +6,6 @@ import {
   Check,
   CircleCheck,
   Clock3,
-  Instagram,
   Mail,
   MapPin,
   Menu,
@@ -487,7 +486,7 @@ function ContactSection() {
 }
 
 function Footer() {
-  return <footer className="bg-[#121110] px-6 pb-8 text-[#eee7d9]"><div className="section-wrap border-t border-[#eee7d9]/15 pt-12"><div className="grid gap-12 md:grid-cols-[1.3fr_.7fr_.8fr]"><div><p className="font-display text-3xl">AMR Architektura</p><p className="mt-2 text-[9px] uppercase tracking-[.18em] text-[#eee7d9]/42">Marzena Ratajczyk / architekt</p><p className="mt-6 max-w-xs text-xs leading-5 text-[#eee7d9]/48">Przestrzeń jako dziedzictwo — projektowana z intencją, budowana na lata.</p></div><div><p className="eyebrow mb-5">Nawigacja</p><div className="grid gap-3 text-xs text-[#eee7d9]/58">{navItems.slice(0, 5).map((item) => <a key={item.href} href={item.href} className="focus-ring transition-colors hover:text-[#eee7d9]" data-testid={`link-footer-${item.label.toLowerCase()}`}>{item.label}</a>)}</div></div><div><p className="eyebrow mb-5">Biuro</p><div className="space-y-2 text-xs leading-5 text-[#eee7d9]/58"><p>osiedle Kopernika 6/2<br />98-300 Wieluń</p><a href="tel:+48533836666" className="focus-ring block hover:text-[#eee7d9]" data-testid="link-footer-phone">533 836 666</a><p>Pon–Sob · 08:00–16:00<br />Niedziela · zamknięte</p></div></div></div><div className="mt-14 flex flex-col gap-3 border-t border-[#eee7d9]/10 pt-5 text-[9px] uppercase tracking-[.15em] text-[#eee7d9]/30 sm:flex-row sm:justify-between"><span>© 2026 AMR Architektura Marzena Ratajczyk</span><a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="focus-ring flex items-center gap-2 hover:text-[#eee7d9]" data-testid="link-footer-instagram">Instagram <Instagram size={14} /></a></div></div></footer>;
+   return <footer className="bg-[#121110] px-6 pb-8 text-[#eee7d9]"><div className="section-wrap border-t border-[#eee7d9]/15 pt-12"><div className="grid gap-12 md:grid-cols-[1.3fr_.7fr_.8fr]"><div><p className="font-display text-3xl">AMR Architektura</p><p className="mt-2 text-[9px] uppercase tracking-[.18em] text-[#eee7d9]/42">Marzena Ratajczyk / architekt</p><p className="mt-6 max-w-xs text-xs leading-5 text-[#eee7d9]/48">Przestrzeń jako dziedzictwo — projektowana z intencją, budowana na lata.</p></div><div><p className="eyebrow mb-5">Nawigacja</p><div className="grid gap-3 text-xs text-[#eee7d9]/58">{navItems.slice(0, 5).map((item) => <a key={item.href} href={item.href} className="focus-ring transition-colors hover:text-[#eee7d9]" data-testid={`link-footer-${item.label.toLowerCase()}`}>{item.label}</a>)}</div></div><div><p className="eyebrow mb-5">Biuro</p><div className="space-y-2 text-xs leading-5 text-[#eee7d9]/58"><p>osiedle Kopernika 6/2<br />98-300 Wieluń</p><a href="tel:+48533836666" className="focus-ring block hover:text-[#eee7d9]" data-testid="link-footer-phone">533 836 666</a><p>Pon–Sob · 08:00–16:00<br />Niedziela · zamknięte</p></div></div></div><div className="mt-14 border-t border-[#eee7d9]/10 pt-5 text-[9px] uppercase tracking-[.15em] text-[#eee7d9]/30"><span>© 2026 AMR Architektura Marzena Ratajczyk</span></div></div></footer>;
 }
 
 function ProjectLightbox({ project, onClose }: { project: Project | null; onClose: () => void }) {
