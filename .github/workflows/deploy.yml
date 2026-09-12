@@ -43,6 +43,9 @@ jobs:
           PORT: 4173
           BASE_PATH: /AMR-Architektura-Studio/
 
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
