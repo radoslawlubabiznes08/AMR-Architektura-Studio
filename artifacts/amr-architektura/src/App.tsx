@@ -350,7 +350,7 @@ function ProjectsSection({ onOpen }: { onOpen: (project: Project) => void }) {
       description: 'Przytulna sypialnia o ciepłym klimacie.',
       image: '/amr-archive-09.png',
       position: 'center',
-      facts: [],
+      facts: ['detal wnętrza', 'konsultacje materiałowe', 'aranżacja oświetlenia'],
     },
   ];
   const visibleProjects = filter === 'Wszystkie' ? archiveProjects : archiveProjects.filter((project) => project.category === filter);
