@@ -1,0 +1,15 @@
+ze mnie ręcznie oraz te wygenerowane automatycznie przez AI w trakcie pracy) — czy są przechowywane jako lokalne pliki w repozytorium (np. w folderach attached_assets, artifacts itd.) i poprawnie importowane w kodzie, czy może ładowane z zewnętrznych adresów URL specyficznych dla infrastruktury Replit (np. adresy zawierające "replit" w domenie).
+Jeśli którekolwiek medium jest ładowane z zewnętrznego linku Replit (a nie jako lokalny plik) — wypisz mi dokładną listę takich plików wraz z miejscem w kodzie, gdzie są używane, żebym mógł zdecydować, czy pobrać je i dodać lokalnie do repozytorium przed publikacją.
+Sprawdź rozmiar pliku/plików wideo (mp4) w projekcie — jeśli którykolwiek przekracza 100 MB, zaproponuj rozwiązanie (kompresja wideo do mniejszego rozmiaru lub konfiguracja Git LFS, jeśli jeszcze nie jest skonfigurowana).
+Podaj mi też łączny rozmiar wszystkich plików graficznych i wideo w projekcie, żebym wiedział czy zbliżamy się do limitów rozmiaru repozytorium GitHub.
+
+Dopiero po tej diagnozie, jeśli wszystko jest lokalnie i w rozsądnych rozmiarach, skonfiguruj:
+5. Sprawdź build command w package.json i lokalizację kodu źródłowego (np. artifacts/amr-architektura), żeby ustalić jak poprawnie zbudować statyczną wersję strony (npm run build lub odpowiednik dla pnpm).
+6. Utwórz plik workflow GitHub Actions (.github/workflows/deploy.yml), który:
+
+uruchamia się automatycznie przy każdym push do brancha main,
+instaluje zależności (pnpm install lub npm install, w zależności co jest używane),
+buduje projekt (build),
+publikuje zbudowane pliki (folder dist lub build, w zależności co generuje build) na GitHub Pages przy użyciu oficjalnej akcji actions/deploy-pages.
+Upewnij się, że konfiguracja Vite/React ma poprawnie ustawiony base path pasujący do adresu GitHub Pages (/AMR-Architektura-Studio/), żeby zasoby (obrazy, CSS, JS) ładowały się poprawnie, a nie dawały błędów 404.
+Pokaż mi dokładnie wyniki diagnozy (punkty 1-4) ORAZ treść utworzonego pliku workflow, zanim go zatwierdzisz.
