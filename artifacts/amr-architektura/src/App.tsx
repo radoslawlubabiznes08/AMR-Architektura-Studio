@@ -23,6 +23,7 @@ import NotFound from '@/pages/not-found';
 import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
+const assetPath = (asset: string) => `${import.meta.env.BASE_URL}${asset.replace(/^\/+/, '')}`;
 
 type Project = {
   id: string;
@@ -44,7 +45,7 @@ const projects: Project[] = [
     place: 'Wieluń',
     year: '2024',
     description: 'Dom, który porządkuje relację między prywatnością a ogrodem. Prosta bryła, miękkie światło i materiały, które dojrzewają razem z mieszkańcami.',
-    image: '/amr-archive-01.png',
+    image: assetPath('/amr-archive-01.png'),
     position: 'center',
     facts: ['184 m²', 'projekt kompleksowy', 'realizacja 2025'],
   },
@@ -55,7 +56,7 @@ const projects: Project[] = [
     place: 'Sieradz',
     year: '2023',
     description: 'Wnętrze apartamentu zbudowane wokół ciszy: wapienne powierzchnie, naturalny dąb i detal bez zbędnego gestu.',
-    image: '/amr-archive-02.png',
+    image: assetPath('/amr-archive-02.png'),
     position: 'center',
     facts: ['92 m²', 'projekt wnętrz', 'nadzór autorski'],
   },
@@ -66,7 +67,7 @@ const projects: Project[] = [
     place: 'okolice Wielunia',
     year: '2022',
     description: 'Kameralny dom jednorodzinny wpisany w pochyłą działkę. Najważniejszym widokiem pozostaje ten, który zmienia się przez cały dzień.',
-    image: '/amr-archive-03.png',
+    image: assetPath('/amr-archive-03.png'),
     position: 'center',
     facts: ['146 m²', 'projekt budowlany', 'koncepcja 2022'],
   },
@@ -77,7 +78,7 @@ const projects: Project[] = [
     place: 'Ruda',
     year: '2024',
     description: 'Przebudowa domu z lat 80. bez udawania nowego początku. Odzyskana wysokość, otwarte parterowe wnętrze i kolor terakoty.',
-    image: '/amr-archive-04.png',
+    image: assetPath('/amr-archive-04.png'),
     position: 'center',
     facts: ['128 m²', 'przebudowa', 'konsultacje materiałowe'],
   },
@@ -88,7 +89,7 @@ const projects: Project[] = [
     place: 'Wieruszów',
     year: '2021',
     description: 'Cichy dom z widokiem na dolinę. Jego plan zaczyna się od porannego światła i kończy na tarasie.',
-    image: '/amr-archive-05.png',
+    image: assetPath('/amr-archive-05.png'),
     position: 'center',
     facts: ['164 m²', 'koncepcja architektoniczna', 'projekt wnętrz'],
   },
@@ -99,7 +100,7 @@ const projects: Project[] = [
     place: 'Wieluń',
     year: '2025',
     description: 'Współczesna bryła zaprojektowana jako spokojne tło dla codzienności.',
-    image: '/amr-archive-06.png',
+    image: assetPath('/amr-archive-06.png'),
     position: 'center',
     facts: ['projekt budowlany', 'detal elewacji', 'nadzór autorski'],
   },
@@ -110,7 +111,7 @@ const projects: Project[] = [
     place: 'okolice Wielunia',
     year: '2025',
     description: 'Ciepłe wnętrze kuchni, w którym naturalne drewno spotyka się z miękkim światłem.',
-    image: '/amr-archive-07.png',
+    image: assetPath('/amr-archive-07.png'),
     position: 'center',
     facts: ['projekt wnętrz', 'materiały naturalne', 'zabudowa na wymiar'],
   },
@@ -121,7 +122,7 @@ const projects: Project[] = [
     place: 'Sieradz',
     year: '2024',
     description: 'Rzeźbiarskie schody i światło, które prowadzą przez wnętrze.',
-    image: '/amr-archive-08.png',
+    image: assetPath('/amr-archive-08.png'),
     position: 'center',
     facts: ['detal wnętrza', 'konsultacje materiałowe', 'projekt kompleksowy'],
   },
@@ -132,7 +133,7 @@ const projects: Project[] = [
     place: 'Wieruszów',
     year: '2024',
     description: 'Przestrzeń dzienna otwarta na ogród, zbudowana wokół spokoju i naturalnych materiałów.',
-    image: '/amr-project-09.png',
+    image: assetPath('/amr-project-09.png'),
     position: 'center',
     facts: ['projekt wnętrz', 'układ funkcjonalny', 'nadzór autorski'],
   },
@@ -143,7 +144,7 @@ const projects: Project[] = [
     place: 'Wieluń',
     year: '2023',
     description: 'Kameralna sypialnia, w której materiały i światło budują poczucie wyciszenia.',
-    image: '/amr-project-10.png',
+    image: assetPath('/amr-project-10.png'),
     position: 'center',
     facts: ['projekt wnętrz', 'koncepcja materiałowa', 'aranżacja'],
   },
@@ -239,8 +240,8 @@ function Hero() {
   const [videoError, setVideoError] = useState(false);
   return (
     <section id="top" className="hero-fallback relative flex min-h-[720px] items-end overflow-hidden text-[#eee7d9] md:min-h-[100svh]">
-      {!videoError && <video className="hero-video" autoPlay muted loop playsInline poster="/amr-hero-poster.jpg" onError={() => setVideoError(true)} aria-label="Ujęcie z lotu ptaka nad Wieluniem"><source src="/amr-hero.mp4" type="video/mp4" /></video>}
-      {videoError && <img className="hero-video" src="/amr-hero-poster.jpg" alt="" />}
+      {!videoError && <video className="hero-video" autoPlay muted loop playsInline poster={assetPath('/amr-hero-poster.jpg')} onError={() => setVideoError(true)} aria-label="Ujęcie z lotu ptaka nad Wieluniem"><source src={assetPath('/amr-hero.mp4')} type="video/mp4" /></video>}
+      {videoError && <img className="hero-video" src={assetPath('/amr-hero-poster.jpg')} alt="" />}
       <div className="hero-overlay" />
       <div className="hero-grid absolute inset-0 opacity-50" />
       <Header />
@@ -284,7 +285,7 @@ function StudioSection() {
           </Reveal>
           <Reveal className="reveal-delay-1">
             <figure className="studio-image relative overflow-hidden">
-              <img src="/amr-archive-01.png" alt="Dom jednorodzinny zaprojektowany przez AMR Architektura" className="h-full min-h-[420px] w-full object-cover object-center grayscale-[.15] sepia-[.12]" />
+              <img src={assetPath('/amr-archive-01.png')} alt="Dom jednorodzinny zaprojektowany przez AMR Architektura" className="h-full min-h-[420px] w-full object-cover object-center grayscale-[.15] sepia-[.12]" />
               <figcaption className="absolute bottom-0 left-0 border-r border-t border-[#eee7d9]/20 bg-[#17120d]/80 px-4 py-3 text-[9px] uppercase tracking-[.15em] text-[#eee7d9]/75">AMR Architektura / Wieluń</figcaption>
             </figure>
           </Reveal>
@@ -348,7 +349,7 @@ function ProjectsSection({ onOpen }: { onOpen: (project: Project) => void }) {
       place: '',
       year: '',
       description: 'Przytulna sypialnia o ciepłym klimacie.',
-      image: '/amr-archive-09.png',
+      image: assetPath('/amr-archive-09.png'),
       position: 'center',
       facts: ['detal wnętrza', 'konsultacje materiałowe', 'aranżacja oświetlenia'],
     },
